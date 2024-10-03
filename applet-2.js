@@ -29,11 +29,18 @@ class leafLetMap{
     addMarker(lat, long, message){
         const marker = L.marker([lat, long]).addTo(this.map)
         this.markerCounts[message] = (this.markerCounts[message] || 0) + 1;
+        this.updateMarkerPopup(marker, message);
         marker.on('click', () => {
             this.markerCounts[message]++;
+            this.updateMarkerPopup(marker, message);
         });
 
         this.markers.push(marker);
+    }
+
+    updateMarkerPopup(marker, message) {
+        const count = this.markerCounts[message];
+        marker.bindPopup(`${message}<br>Attendance logs: ${count}`).openPopup();
     }
 
     loadMarkersFromJson(url){
