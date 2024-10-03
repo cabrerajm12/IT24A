@@ -7,5 +7,8 @@ class dataLogger{
         this.logCountElement = document.getElementById(logCountId);
         this.loggedData = [];
 
+        this.logButton.addEventListener('click', () => this.logData());
+        this.clearButton.addEventListener('click', () => this.clearLogs());
+
     }
 }
