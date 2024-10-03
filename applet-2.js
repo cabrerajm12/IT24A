@@ -6,7 +6,10 @@ class leafLetMap{
         this.attendanceCountSC = 0;
         this.attendanceCountBA = 0;
         this.attendanceCountLab = 0;
-
+        this.markerCounts = {};
+        this.markers = [];
+        this.loggedData = []; 
+        
         this.btnclear = document.getElementById('btnclear');
         this.logCountElement = document.getElementById('logCount');
         this.logCount1Element = document.getElementById('logCountBA');
