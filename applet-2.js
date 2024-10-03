@@ -2,6 +2,12 @@ class leafLetMap{
     constructor(containerId, center, zoom){
       this.map = L.map(containerId).setView(center, zoom);
       this.initTileLayer();
+
+        this.btnclear = document.getElementById('btnclear');
+        this.logCountElement = document.getElementById('logCount');
+        this.logCount1Element = document.getElementById('logCountBA');
+        this.logCount2Element = document.getElementById('logCountCCS');
+        this.idContainer = document.getElementById('logContainer');
     }
     initTileLayer(){
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
