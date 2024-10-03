@@ -54,20 +54,29 @@ class leafLetMap{
         .catch(error => console.error("Error Loading servers:", error));
     }
 
+    displayLogCount() {      
+        this.logCountElement.innerHTML = `SC Building Attendance: ${this.attendanceCountSC}`;
+        this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
+        this.logCount2Element.innerHTML = `CCS Laboratory Attendance: ${this.attendanceCountLab}`;
+   }
+
     dataSc() {
         this.addMarker(8.360238, 124.867470, 'SC building');
         this.attendanceCountSC++; 
+        this.updateLogDisplay();
         
     }
 
     dataBa() {
         this.addMarker(8.359134, 124.868537, 'BA building');
         this.attendanceCountBA++; 
+        this.updateLogDisplay();
     }
 
     dataLab() {
         this.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
         this.attendanceCountLab++;
+        this.updateLogDisplay();
     }
 }
 
