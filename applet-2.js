@@ -108,6 +108,9 @@ class leafLetMap{
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
 
-
-
 Mymap.loadMarkersFromJson('applet-2.json');
+
+document.addEventListener('DOMContentLoaded', () => {
+    Mymap.displayLogCount();
+    Mymap.loadMarkersFromJson('applet-2.json');
+});
