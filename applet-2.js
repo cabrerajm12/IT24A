@@ -59,6 +59,11 @@ class leafLetMap{
         this.attendanceCountSC++; 
         
     }
+
+    dataBa() {
+        this.addMarker(8.359134, 124.868537, 'BA building');
+        this.attendanceCountBA++; 
+    }
 }
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
