@@ -39,4 +39,8 @@ class dataLogger{
             this.idContainer.appendChild(card);
         });
     }
+
+    countLogs(){
+        return this.loggedData.length;
+      }
 }
