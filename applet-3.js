@@ -16,4 +16,9 @@ class dataLogger{
         const time = new Date().toLocaleString();
         this.loggedData.push(time);
     }
+
+    clearLogs(){
+        this.loggedData = []; 
+       
+    }
 }
