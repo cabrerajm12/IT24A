@@ -8,6 +8,10 @@ class leafLetMap{
         this.logCount1Element = document.getElementById('logCountBA');
         this.logCount2Element = document.getElementById('logCountCCS');
         this.idContainer = document.getElementById('logContainer');
+        this.btn.addEventListener('click', () => this.dataSc());
+        this.btn1.addEventListener('click', () => this.dataLab());
+        this.btn2.addEventListener('click', () => this.dataBa());
+        this.btnclear.addEventListener('click', () => this.clearLogs());
     }
     initTileLayer(){
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
