@@ -38,6 +38,7 @@ class dataLogger{
             `;
             this.idContainer.appendChild(card);
         });
+        this.displayLogCount();
     }
 
     countLogs(){
