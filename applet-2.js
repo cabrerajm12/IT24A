@@ -64,6 +64,11 @@ class leafLetMap{
         this.addMarker(8.359134, 124.868537, 'BA building');
         this.attendanceCountBA++; 
     }
+
+    dataLab() {
+        this.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
+        this.attendanceCountLab++;
+    }
 }
 
 const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
