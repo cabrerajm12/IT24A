@@ -50,3 +50,6 @@ class dataLogger{
         this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
     }
 }
+    document.addEventListener('DOMContentLoaded', () => {
+    new dataLogger('logButton', 'idContainer', 'clearButton', 'logCount'); 
+    })
