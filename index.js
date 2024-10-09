@@ -25,3 +25,6 @@ class searchCard {
         });
     }
 }
+           document.addEventListener('DOMContentLoaded', () => {
+             new searchCard('cardSearch', 'container2');
+            });
