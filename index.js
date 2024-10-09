@@ -1,15 +1,18 @@
-class searchCard {
-        constructor(searchInputId, cardContainerClass) {
-          this.searchInput = document.getElementById(searchInputId);
-          this.cardContainer = document.querySelector(`.${cardContainerClass}`);
-          this.cards = this.cardContainer.querySelectorAll('.card');
-          this.init();
+class CardSearch {
+    constructor(searchInputId, cardContainerClass) {
+        this.searchInput = document.getElementById(searchInputId);
+        this.cardContainer = document.querySelector(`.${cardContainerClass}`);
+        this.cards = this.cardContainer.querySelectorAll('.card');
+
+        this.init();
     }
+
     init() {
         this.searchInput.addEventListener('input', () => {
             this.filterCards(this.searchInput.value);
         });
     }
+
     filterCards(query) {
         const searchTerm = query.toLowerCase();
 
@@ -18,13 +21,14 @@ class searchCard {
             const text = card.querySelector('.card-text').textContent.toLowerCase();
 
             if (title.includes(searchTerm) || text.includes(searchTerm)) {
-                card.closest('.col-sm-4').style.display = '';
+                card.closest('.col-md-4').style.display = ''; 
             } else {
-                card.closest('.col-sm-4').style.display = 'none'; 
+                card.closest('.col-md-4').style.display = 'none'; 
             }
         });
     }
 }
+
            document.addEventListener('DOMContentLoaded', () => {
-             new searchCard('cardSearch', 'container2');
+            new CardSearch('cardSearch', 'container'); 
             });
