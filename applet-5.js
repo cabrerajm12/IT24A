@@ -30,6 +30,7 @@ class weatherApp{
 
 class WeatherService extends weatherApp {
     constructor(){
-        
+        super();
+        this.apiKey = '';
     }
 }
