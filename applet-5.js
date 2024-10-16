@@ -27,3 +27,9 @@ class weatherApp{
         this.weatherCard.style.display = 'block';
     }
 }
+
+class WeatherService extends weatherApp {
+    constructor(){
+        
+    }
+}
