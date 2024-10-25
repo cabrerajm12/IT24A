@@ -61,3 +61,7 @@ class todoList{
         this.addButton.textContent = 'Add';
     }
 }
+
+class TimestampedTodoList extends todoList {
+   
+}
